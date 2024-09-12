@@ -16,7 +16,7 @@ session = cnx.session()
 
 Enter_Name = st.text_input('Name on Smoothie...!')
 st.write('Name on the Smoothie will be : ', Enter_Name)
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
+my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),col('SEARCH_ON'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
 #convert snowpark dataframe to pandas dataframe so we can use LOC function
